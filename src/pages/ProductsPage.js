@@ -3,7 +3,6 @@ import ProductFilter from "../components/ProductFilter";
 import ProductList from "../components/ProductList";
 
 const ProductsPage = () => {
-
 	return (
 		<Wrapper>
 			<section className="section-header">
@@ -14,8 +13,8 @@ const ProductsPage = () => {
 				</div>
 			</section>
       <section className="section-center">
-        <ProductFilter />
-        <ProductList />
+        <ProductFilter/>
+        <ProductList/>
 			</section>
 		</Wrapper>
 	);
@@ -33,7 +32,7 @@ const Wrapper = styled.main`
 	.section-center {
 		display: grid;
 		gap: 4rem;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 200px 1fr;
 		margin: 0 auto;
 		max-width: 1170px;
 		width: 95vw;
