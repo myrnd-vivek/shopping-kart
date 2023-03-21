@@ -8,6 +8,7 @@ const initialState = {
 	filterProduct: [],
 	filters: {
 		text: "",
+		category: "all",
 	},
 };
 
@@ -24,7 +25,7 @@ export const FilterProvider = ({ children }) => {
 
   useEffect(() => {
     dispatch({type: "FILTER_PRODUCTS"})
-  },[state.filters.text])
+  },[state.filters])
 
 	const updateFilter = (e) => {
 		const value = e.target.value;

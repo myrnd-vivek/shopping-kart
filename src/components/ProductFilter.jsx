@@ -2,7 +2,7 @@ import React from "react";
 import { useFilterContext } from "../context/filter_context";
 
 const ProductFilter = () => {
-  const {updateFilter, state: {filters: {text}}} = useFilterContext();
+  const {updateFilter, clearFilter, state: {filters: {text}}} = useFilterContext();
   return (
     <section>
       <div className="content">
@@ -17,61 +17,19 @@ const ProductFilter = () => {
               onChange={updateFilter}
             />
           </div>
-          {/* <div className="form-control">
+          <div className="form-control">
             <h5>category</h5>
-            <div>
-              <button
-                type="button"
-                name="category"
-                className="active"
-              >
-                all
-              </button>
-              <button
-                type="button"
-                name="category"
-                className="null"
-              >
-                office
-              </button>
-              <button
-                type="button"
-                name="category"
-                className="null"
-              >
-                living room
-              </button>
-              <button
-                type="button"
-                name="category"
-                className="null"
-              >
-                kitchen
-              </button>
-              <button
-                type="button"
-                name="category"
-                className="null"
-              >
-                bedroom
-              </button>
-              <button
-                type="button"
-                name="category"
-                className="null"
-              >
-                dining
-              </button>
-              <button
-                type="button"
-                name="category"
-                className="null"
-              >
-                kids
-              </button>
+            <div style={{display: "flex",flexDirection: "column"}}>
+              <button type="button" name="category" onClick={updateFilter} value="all">all</button>
+              <button type="button" name="category" onClick={updateFilter} value="office">office</button>
+              <button type="button" name="category" onClick={updateFilter}>living room</button>
+              <button type="button" name="category" onClick={updateFilter}>kitchen</button>
+              <button type="button" name="category" onClick={updateFilter}>bedroom</button>
+              <button type="button" name="category" onClick={updateFilter}>dining</button>
+              <button type="button" name="category" onClick={updateFilter}>kids</button>
             </div>
           </div>
-          <div className="form-control">
+          {/* <div className="form-control">
             <h5>company</h5>
             <select name="company" className="company">
               <option value="all">all</option>
@@ -133,9 +91,7 @@ const ProductFilter = () => {
             />
           </div> */}
         </form>
-        <button type="button" className="clear-btn">
-          clear filters
-        </button>
+        <button type="button" onClick={clearFilter} className="clear-btn">clear filters</button>
       </div>
     </section>
   );

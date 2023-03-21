@@ -19,7 +19,7 @@ export const reducer = (state, action) => {
 
   if (action.type === "FILTER_PRODUCTS") {
     const { allProduct } = state;
-    const { text } = state.filters;
+    const { text, category } = state.filters;
 
     let tempProduct = [...allProduct];
 
@@ -29,7 +29,11 @@ export const reducer = (state, action) => {
         return product.name.startsWith(text);
       })
     }
-    console.log(tempProduct);
+    if (category !== 'all') {
+      tempProduct = tempProduct.filter((product) => {
+        return product.category === category;
+      })
+    }
     return {
       ...state,
       filterProduct: tempProduct
