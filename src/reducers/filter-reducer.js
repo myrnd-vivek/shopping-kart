@@ -19,7 +19,7 @@ export const reducer = (state, action) => {
 
   if (action.type === "FILTER_PRODUCTS") {
     const { allProduct } = state;
-    const { text, category } = state.filters;
+    const { text, category, company } = state.filters;
 
     let tempProduct = [...allProduct];
 
@@ -29,9 +29,15 @@ export const reducer = (state, action) => {
         return product.name.startsWith(text);
       })
     }
-    if (category !== 'all') {
+    if (category && category !== 'all') {
       tempProduct = tempProduct.filter((product) => {
         return product.category === category;
+      })
+    }
+
+    if (company && company !== 'all') {
+      tempProduct = tempProduct.filter((product) => {
+        return product.company === company;
       })
     }
     return {

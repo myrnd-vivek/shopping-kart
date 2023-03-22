@@ -6,7 +6,7 @@ const ProductsPage = () => {
 	return (
 		<Wrapper>
 			<section className="section-header">
-				<div className="section-center">
+				<div className="section-center" style={{gridTemplateColumns: "1fr"}}>
 					<h3>
 						<a href="/">Home </a>/ Products
 					</h3>
@@ -33,7 +33,7 @@ const Wrapper = styled.main`
 		display: grid;
 		gap: 4rem;
 		grid-template-columns: 200px 1fr;
-		margin: 0 auto;
+		margin: 4rem auto;
 		max-width: 1170px;
 		width: 95vw;
 		h3 {

@@ -25,14 +25,14 @@ const HomePage = () => {
           <img src="https://react-course-comfy-sloth-store.netlify.app/static/media/hero-bcg-2.789918645915c8acb36f.jpeg" alt="person working" className="accent-img" />
         </article>
 			</section>
-			<section class="sc-ftTHYK HfPUG">
-				<div class="section-center">
+			<section className="sc-ftTHYK HfPUG">
+				<div className="section-center">
 					<h3>Join our newsletter and get 20% off</h3>
-					<div class="content">
+					<div className="content">
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sint unde quaerat ratione soluta veniam provident adipisci cumque eveniet tempore?</p>
-						<form class="contact-form">
-							<input type="email" class="form-input" placeholder="enter email" />
-							<button type="submit" class="submit-btn">subscribe</button>
+						<form className="contact-form">
+							<input type="email" className="form-input" placeholder="enter email" />
+							<button type="submit" className="submit-btn">subscribe</button>
 						</form>
 					</div>
 				</div>

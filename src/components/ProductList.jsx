@@ -15,7 +15,7 @@ const ProductList = () => {
 						</div>
 						<footer>
 							<h5>{prod.name}</h5>
-							<p>${prod.price}</p>
+							<h5>${prod.price}</h5>
 						</footer>
 					</article>;
 				})}
@@ -29,6 +29,20 @@ const Wrapper = styled.section`
     display: grid;
     gap: 2rem 1.5rem;
     grid-template-columns: repeat(3, 1fr);
+		img {
+			height: 175px;
+			width: 100%;
+			display: block;
+			object-fit: cover;
+			border-radius: var(--radius);
+			transition: var(--transition);
+		}
+		footer {
+			margin-top: 1rem;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
   }
 `
 
